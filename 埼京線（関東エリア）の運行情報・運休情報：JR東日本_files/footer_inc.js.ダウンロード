@@ -1,0 +1,66 @@
+'use strict';
+
+window.addEventListener('DOMContentLoaded', footerInit);
+
+
+
+/*--------------------------------------------------------------------------------------------------------
+フッター初期化
+--------------------------------------------------------------------------------------------------------*/
+
+function footerInit() {
+
+/*--------------------------------------------------------------------------------------------------------
+footerHTMLを挿入
+--------------------------------------------------------------------------------------------------------*/
+	const footerHTML = `
+<div id="jre_footer_in">
+	<p class="topLink_sp"><a href="https://www.jreast.co.jp/">JR東日本トップ</a></p>
+	<div class="footer_top">
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/railway/">鉄道・きっぷの予約</a></p>
+		</div>
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/travel/">エリア・観光</a></p>
+		</div>
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/life/">生活サービス</a></p>
+		</div>
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/suica/">Suica</a></p>
+		</div>
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/company/" target="_blank" rel="noopener" class="link_blank">企業・IR・サステナビリティ<span class="screen-reader-text">別ウィンドウで開きます</span></a></p>
+		</div>
+		<div class="footer_top_link">
+			<p class="link_genre"><a href="https://www.jreast.co.jp/recruit/" target="_blank" rel="noopener" class="link_blank">採用<span class="screen-reader-text">別ウィンドウで開きます</span></a></p>
+		</div>
+	<!--//.footer_top--></div>
+
+	<div class="footer_bottom">
+		<ul class="footer_bottom_link">
+			<li><a href="https://www.jreast.co.jp/saferelief/">安全・安心の取り組み</a></li>
+			<li><a href="https://www.jreast.co.jp/equipment/">お身体の不自由なお客さまへ</a></li>
+			<li><a href="https://www.jreast.co.jp/info/">よくいただくお問い合わせ</a></li>
+			<li><a href="https://www.jreast.co.jp/press/">ニュースリリース一覧</a></li>
+			<li><a href="https://www.jreast.co.jp/socialmedia/">ソーシャルメディア一覧</a></li>
+			<li><a href="https://www.jreast.co.jp/smtapps/">公式スマートフォンアプリ一覧</a></li>
+		</ul>
+		<p class="topLink_pc"><a href="https://www.jreast.co.jp/">JR東日本トップ</a></p>
+		<p class="My_JR"><a href="https://www.jreast.co.jp/myjreast/">My JR-EAST</a></p>
+
+		<ul class="footer_bottom_link02">
+			<li><a href="https://www.jreast.co.jp/site/rules.html">JR東日本ウェブサイトのご利用にあたって</a></li>
+			<li><a href="https://www.jreast.co.jp/site/privacy.html">個人情報の取扱いに関する基本方針</a></li>
+			<li><a href="https://www.jreast.co.jp/company/compliance/">JR東日本グループのコンプライアンスに関する取組み</a></li>
+			<li><a href="https://www.jreast.co.jp/web_accessibility/">ウェブアクセシビリティ方針</a></li>
+		</ul>
+	<!--//.footer_bottom--></div>
+<!--//#jre_footer_in--></div>
+<p class="copy">Copyright &copy; East Japan Railway Company All Rights Reserved.</p>
+`;
+
+	//フッターを生成する
+	document.getElementById('jre_mtd_footer').insertAdjacentHTML('beforeend' , footerHTML);
+
+}

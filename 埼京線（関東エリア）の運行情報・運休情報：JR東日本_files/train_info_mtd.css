@@ -1,0 +1,2105 @@
+@charset "UTF-8";
+/* -----------------------------------------
+	base
+----------------------------------------- */
+@media screen and (max-width: 750px) {
+  #mainContents .container > .contentsWrapper > .wrapper#appWrap {
+    padding-bottom: 10%;
+  }
+}
+
+/*英語版対応*/
+#service_e {
+  word-wrap: break-word;
+}
+
+#service_e #appWrap .app_eBox .cardsBox {
+  max-width: 460px;
+  width: 48.5%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 750px) {
+  #service_e #appWrap .app_eBox .cardsBox {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.dispB {
+  display: block;
+}
+
+.flexWrap {
+  flex-wrap: wrap;
+}
+
+.m0auto {
+  margin: 0 auto;
+}
+
+.mb2p {
+  margin-bottom: 2%;
+}
+
+.ml2p {
+  margin-left: 2%;
+}
+
+.calc01 {
+  width: calc(100% - 75px);
+}
+
+.cardsBox .link02 a, .cardsBox .linkBlank02 a {
+  padding-bottom: 5px;
+}
+
+.bgWhite {
+  background: #fff !important;
+}
+
+.indent04 {
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+.pageTop {
+  z-index: 999;
+}
+
+.caption_heading {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .sp_font10 {
+    font-size: 1rem !important;
+  }
+  .sp_font26 {
+    font-size: 2.6rem;
+  }
+  .sp_font35vw {
+    font-size: 3.5vw !important;
+  }
+  .sp_ta-l {
+    text-align: left;
+  }
+  /*JEIS 0912
+  .sp_ta-c {text-align: center;}
+  JEIS 0912*/
+  .sp_jcFs {
+    justify-content: flex-start;
+  }
+  .sp_jcC {
+    justify-content: center;
+  }
+  .cardsBox {
+    padding-top: 5% !important;
+  }
+  .caption_heading {
+    margin: 0 0 10px 10px;
+    text-align: left;
+  }
+}
+/* -----------------------------------------
+	情報更新ボタン
+----------------------------------------- */
+.loadBtn a {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  padding: 9px 40px 9px 15px;
+  background: #757575;
+  color: #fff;
+}
+
+.loadBtn a:after {
+  content: "";
+  display: block;
+  background: url("/train_info/img/ico_reload.svg") no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .loadBtn a {
+    width: 105px;
+    padding: 2px 30px 2px 10px;
+  }
+  .loadBtn a:after {
+    width: 21px;
+    height: 17px;
+    top: 3px;
+    right: 10px;
+  }
+}
+/* -----------------------------------------
+	表示日時
+----------------------------------------- */
+.current_time {
+  font-size: 150%;
+  border-left: 7px solid #008900;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+/* -----------------------------------------
+	trainInfo_top_nav
+----------------------------------------- */
+.trainInfo_top_nav {
+  display: flex;
+  padding: 40px 0;
+  justify-content: space-between;
+}
+.trainInfo_top_nav .cardsBox_linkList {
+  max-width: 600px;
+  width: 64%;
+}
+.trainInfo_top_nav .cardsBox_linkList .cardsBox_link + .cardsBox_link {
+  margin-top: 20px;
+}
+.trainInfo_top_nav .cardsBox_linkList .cardsBox_link a {
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+.trainInfo_top_nav .cardsBox_linkList .nav_icon {
+  margin-right: 35px;
+  width: 67px;
+}
+.trainInfo_top_nav .cardsBox_linkList .nav_txt {
+  width: calc(100% - 67px);
+}
+.trainInfo_top_nav .cardsBox_linkList .link_name {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #008803;
+}
+.trainInfo_top_nav .cardsBox_linkList .link_name::before {
+  content: "";
+  display: block;
+  background: url(/material/img/ico_link.svg) no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  left: 2px;
+}
+.trainInfo_top_nav .aboutArea_map {
+  max-width: 313px;
+  width: 33%;
+  text-align: center;
+  padding-top: 20px;
+}
+.trainInfo_top_nav .aboutArea_map .accBtn {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+  .trainInfo_top_nav {
+    display: block;
+    padding: 30px 0 0;
+  }
+  .trainInfo_top_nav .cardsBox_linkList {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .cardsBox_link + .cardsBox_link {
+    margin-top: 5%;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .cardsBox_link a {
+    position: relative;
+    height: auto;
+    padding: 5% 45px 5% 5%;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .cardsBox_link a::after {
+    content: "";
+    display: block;
+    background: url(/material/img/ico_link.svg) no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 15px;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .nav_icon {
+    width: 53px;
+    margin-right: 10px;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .nav_txt {
+    width: calc(100% - 63px);
+  }
+  .trainInfo_top_nav .cardsBox_linkList .link_name {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .trainInfo_top_nav .cardsBox_linkList .link_name::before {
+    content: none;
+  }
+  .trainInfo_top_nav .aboutArea_map {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+  }
+  .trainInfo_top_nav .aboutArea_map .accBtn {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+  }
+  .trainInfo_top_nav .aboutArea_map .accBtn::before, .trainInfo_top_nav .aboutArea_map .accBtn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #bbb;
+    transition: 0.4s;
+  }
+  .trainInfo_top_nav .aboutArea_map .accBtn::before {
+    width: 4px;
+    height: 25px;
+    right: 10px;
+  }
+  .trainInfo_top_nav .aboutArea_map .accBtn::after {
+    width: 25px;
+    height: 4px;
+    right: 0;
+  }
+  .trainInfo_top_nav .aboutArea_map .accBtn.is-active::before {
+    transform: rotate(-90deg);
+  }
+  .trainInfo_top_nav .aboutArea_map .accIn {
+    line-height: 0;
+    height: 0;
+    opacity: 0;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    padding-top: 0;
+    width: auto;
+  }
+  .trainInfo_top_nav .aboutArea_map .accIn.is-show {
+    line-height: normal;
+    height: auto;
+    opacity: 1;
+    padding-top: 10px;
+  }
+}
+/* -----------------------------------------
+	trainInfo_top_btn
+----------------------------------------- */
+.trainInfo_top_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.trainInfo_top_btn li a {
+  width: 300px;
+  padding: 15px 15px 14px !important;
+  font-size: 1.6rem;
+}
+
+.trainInfo_top_btn li + li {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .trainInfo_top_btn {
+    display: block;
+  }
+  .trainInfo_top_btn li a {
+    width: 180px;
+    margin: 0 auto;
+    padding: 10px 15px !important;
+  }
+  .trainInfo_top_btn li + li {
+    margin-top: 25px;
+    margin-left: 0;
+  }
+}
+/* -----------------------------------------
+	informationBox
+----------------------------------------- */
+#mainContents .container.traininfo_info {
+  padding: 40px 0 50px;
+  background: #daedd9;
+}
+#mainContents .container.traininfo_info.is-hidden {
+  display: none;
+}
+
+.informationBox li {
+  position: relative;
+  padding: 10px 20px;
+  border-top: 1px solid #bbb;
+}
+
+.informationBox li:last-child {
+  border-bottom: 1px solid #bbb;
+}
+
+.informationBox li > .date {
+  font-weight: bold;
+  margin: 0 15px 10px 0;
+  width: 120px;
+}
+
+.informationBox li .text a {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.informationBox li:after {
+  content: "";
+  display: block;
+  background: url(/material/img/ico_link.svg) no-repeat;
+  background-size: contain;
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+
+.informationBox li.blank:after {
+  content: "";
+  display: block;
+  background: url(/material/img/ico_blank.svg) no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  #mainContents .container.traininfo_info {
+    padding: 10% 0;
+  }
+  .informationBox li > .date {
+    margin: 0 15px 5px 0;
+    width: 120px;
+  }
+}
+/* -----------------------------------------
+	linkPage_list
+----------------------------------------- */
+.linkPage_list {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+  .linkPage_list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .linkPage_list li {
+    width: 49%;
+  }
+}
+/* -----------------------------------------
+	アコーディオン
+----------------------------------------- */
+/*もっと見るボタン*/
+.accMore_cont tbody tr:nth-of-type(n+8) {
+  display: none;
+}
+.accMore_cont tbody tr:nth-of-type(n+8).is-show {
+  display: table-row;
+}
+
+.accMore_btn {
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+  background: #008803;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.accMore_btn::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  right: 14px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.accMore_btn::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: #fff;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.4s;
+}
+
+.accMore_btn.is-active::after {
+  transform: rotate(-90deg);
+}
+
+/*非表示へボタン*/
+.acc_dispBtn {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  padding: 14px 45px 12px;
+  background: #444;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.acc_dispBtn::before,
+.acc_dispBtn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  background: #fff;
+  transition: 0.4s;
+}
+
+.acc_dispBtn::before {
+  width: 2px;
+  height: 20px;
+  right: 29px;
+  top: 0;
+  bottom: 0;
+}
+
+.acc_dispBtn::after {
+  width: 20px;
+  height: 2px;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.acc_dispBtn.is-active::before {
+  transform: rotate(-90deg);
+}
+
+.acc_dispBox {
+  line-height: 0;
+  height: 0;
+  opacity: 0;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  padding-top: 0;
+}
+.acc_dispBox.is-show {
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .acc_dispBtn {
+    display: block;
+    padding: 7px 45px;
+    font-size: 1.4rem;
+  }
+  /* .acc_dispBox {
+  	display: none;
+  } */
+}
+/* -----------------------------------------
+	statusTable
+----------------------------------------- */
+.statusTable {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable {
+    display: block;
+  }
+}
+.statusTable .rosenBox {
+  width: 50%;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+@media screen and (min-width: 751px) {
+  .statusTable .rosenBox:nth-child(2n+1):nth-last-child(-n+2), .statusTable .rosenBox:nth-child(2n+1):nth-last-child(-n+2) ~ .rosenBox {
+    border-bottom: none;
+  }
+  .statusTable .rosenBox:nth-child(2n+3):last-child {
+    border-right: 1px solid #ddd;
+  }
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox {
+    width: 100%;
+    display: block;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox {
+  width: 40%;
+  padding: 10px 0 15px;
+  background: #f8f8f8;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .regulation {
+  background-color: #f22335;
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .regulation {
+    font-size: 1.3rem;
+    padding: 1%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_nameBox_inn {
+  padding: 0 15px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_nameBox_inn {
+    padding: 0 5px;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name {
+    margin-bottom: 0;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name .rosen_ico {
+  width: 40px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name .rosen_ico {
+    width: 15%;
+    margin-right: 4%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name .rosen_color {
+  width: 40px;
+  height: 9px;
+  margin: -1px 10px 1px 0;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name .rosen_color {
+    width: 15%;
+    margin-right: 4%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: calc(100% - 50px);
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name .name {
+    width: 79%;
+    font-size: 1.6rem;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name_express {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name_express {
+    margin-bottom: 0;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .rosen_name_express .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#service_e .statusTable .rosenBox .rosen_nameBox .rosen_name_express .name {
+  word-break: break-all;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .rosen_name_express .name {
+    width: 79%;
+    font-size: 1.6rem;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box {
+  display: flex;
+  justify-content: space-between;
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_detail {
+  width: 38%;
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_detail.lang_multi {
+  width: 50%;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .btn_box .btn_detail {
+    display: none;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_detail a {
+  display: block;
+  background: #008803;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 15px;
+  text-align: center;
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_detail a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_transfer {
+  width: 56%;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .btn_box .btn_transfer {
+    width: 30%;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_transfer a {
+  display: block;
+  background: #0070C0;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 15px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .btn_box .btn_transfer a {
+    font-size: 1.2rem;
+    padding: 2% 3%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_transfer a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_suspension {
+  width: 56%;
+  margin-left: auto;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .btn_box .btn_suspension {
+    width: 30%;
+    margin-top: 10px;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_suspension a {
+  display: block;
+  background: #0070C0;
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 15px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_nameBox .btn_box .btn_suspension a {
+    font-size: 1.2rem;
+    padding: 2% 3%;
+  }
+}
+.statusTable .rosenBox .rosen_nameBox .btn_box .btn_suspension a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.statusTable .rosenBox .rosen_infoBox {
+  width: 60%;
+  padding: 20px 10px;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_infoBox {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.statusTable .rosenBox .rosen_infoBox > a {
+  pointer-events: none;
+  color: #333;
+}
+@media screen and (max-width: 750px) {
+  .statusTable .rosenBox .rosen_infoBox > a {
+    pointer-events: auto;
+    display: block;
+    position: relative;
+  }
+  .statusTable .rosenBox .rosen_infoBox > a::after {
+    content: "";
+    display: block;
+    background: url(/material/img/ico_link.svg) no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -10px;
+  }
+}
+.statusTable .status_Text {
+  margin-top: 15px;
+}
+.statusTable.expressBox {
+  display: block;
+}
+.statusTable.expressBox .rosenBox {
+  width: 100%;
+}
+.statusTable.expressBox .rosenBox .rosen_nameBox {
+  width: 30%;
+}
+.statusTable.expressBox .rosenBox .rosen_infoBox {
+  width: 70%;
+}
+.statusTable table th {
+  width: 28%;
+}
+@media screen and (max-width: 750px) {
+  .statusTable table th {
+    padding: 15px 6px 5px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .statusTable table td {
+    padding: 15px 9px 5px;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+  padding-left: 20px;
+}
+@media screen and (max-width: 750px) {
+  .status {
+    font-size: 1.7rem;
+    padding-left: 0;
+  }
+}
+
+.status.normal {
+  color: #539e04;
+}
+
+.status.delay {
+  color: #f29130;
+}
+
+.status.adjust {
+  color: #ff0920;
+}
+
+.status.stop {
+  color: #ff5a00;
+}
+
+.status.info {
+  color: #f29130;
+}
+
+.status.stopdirect {
+  color: #666;
+}
+
+.statusIcon {
+  margin-right: 15px;
+}
+@media screen and (max-width: 750px) {
+  .statusIcon {
+    margin-right: 10px;
+  }
+}
+
+.statusIcon img {
+  width: 40px;
+}
+@media screen and (max-width: 750px) {
+  .statusIcon img {
+    width: 25px;
+  }
+}
+
+.statusTable a:hover {
+  text-decoration: none;
+}
+
+.statusTable p.link a {
+  font-weight: normal;
+}
+
+.statusTable p.link a:hover {
+  text-decoration: underline;
+}
+
+.heading03.rosen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusTable .btn a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 2px 16px 1px;
+}
+
+/* -----------------------------------------
+	路線色
+----------------------------------------- */
+.yamanoteline {
+  background: #73c11d;
+}
+
+.chuoline_rapidservice {
+  background: #ff5611;
+}
+
+.chuoline {
+  background: #0071c5;
+}
+
+.tokaidoline {
+  background: #ff871c;
+}
+
+.yokosukaline {
+  background: #0071c5;
+}
+
+.keihin-tohokuline {
+  background: #00acd1;
+}
+
+.negisiline {
+  background: #00acd1;
+}
+
+.yokohamaline {
+  background: #73c11d;
+}
+
+.nambuline {
+  background: #fdd700;
+}
+
+.sagamiline {
+  background: #008689;
+}
+
+.itoline {
+  background: #378640;
+}
+
+.tsurumiline {
+  background: #fdd700;
+}
+
+.musashinoline {
+  background: #ff5611;
+}
+
+.omeline {
+  background: #ff5611;
+}
+
+.itsukaichiline {
+  background: #ff5611;
+}
+
+.saikyoline {
+  background: #00c3a7;
+}
+
+.kawagoeline {
+  background: #a6a9ab;
+}
+
+.utsunomiyaline {
+  background: #ff871c;
+}
+
+.nikkoline {
+  background: #ff871c;
+}
+
+.karasuyamaline {
+  background: #ff871c;
+}
+
+.takasakiline {
+  background: #ff871c;
+}
+
+.ryomoline {
+  background: #fdd700;
+}
+
+.hachikoline {
+  background: #a09d95;
+}
+
+.agatsumaline {
+  background: #008689;
+}
+
+.shin-etsuline_kanto {
+  background: #73c11d;
+}
+
+.jobanline {
+  background: #0071c5;
+}
+
+.jobanline_rapidservice {
+  background: #00bb85;
+}
+
+.jobanline_local {
+  background: #9e9e9f;
+}
+
+.mitoline {
+  background: #0071c5;
+}
+
+.suigunline {
+  background: #378640;
+}
+
+.chuo_sobuline_local {
+  background: #fdd700;
+}
+
+.sobuline_rapidservice {
+  background: #0071c5;
+}
+
+.keiyoline {
+  background: #b31c31;
+}
+
+.uchiboline {
+  background: #0071c5;
+}
+
+.sotoboline {
+  background: #f22335;
+}
+
+.naritaline {
+  background: #00bb85;
+}
+
+.toganeline {
+  background: #b31c31;
+}
+
+.kashimaline {
+  background: #a85f12;
+}
+
+.kururiline {
+  background: #00c3a7;
+}
+
+.tohokuline {
+  background: #00bb85;
+}
+
+.ouline {
+  background: #ff7e1c;
+}
+
+.ouline_yamagataline {
+  background: #ff7e1c;
+}
+
+.sensekiline {
+  background: #00acd1;
+}
+
+.senseki-tohokuline {
+  background: #00acd1;
+}
+
+.senzanline {
+  background: #4dc94a;
+}
+
+.riku-eastline {
+  background: #75787a;
+}
+
+.riku-westline {
+  background: #69d485;
+}
+
+.ban-etsu-eastline {
+  background: #c5527a;
+}
+
+.ban-etsu-westline {
+  background: #bc6e23;
+}
+
+.kesennumaline {
+  background: #4641a4;
+}
+
+.kesennumaline_brt {
+  background: #4641a4;
+}
+
+.ishinomakiline {
+  background: #f76f99;
+}
+
+.aterazawaline {
+  background: #0072ba;
+}
+
+.yonesakaline {
+  background: #b074d6;
+}
+
+.tadamiline {
+  background: #0081b8;
+}
+
+.tsugaruline {
+  background: #00acd1;
+}
+
+.ominatoline {
+  background: #c59411;
+}
+
+.hachinoheline {
+  background: #ff463e;
+}
+
+.hanawaline {
+  background: #b31c31;
+}
+
+.yamadaline {
+  background: #bc6e23;
+}
+
+.kamaishiline {
+  background: #0071c5;
+}
+
+.kitakamiline {
+  background: #8f0079;
+}
+
+.ofunatoline {
+  background: #ff8b52;
+}
+
+.ofunatoline_brt {
+  background: #ff8b52;
+}
+
+.uetsuline {
+  background: #00b9db;
+}
+
+.tazawakoline {
+  background: #b074d6;
+}
+
+.gonoline {
+  background: #0081b8;
+}
+
+.ogaline {
+  background: #378640;
+}
+
+.joetsuline {
+  background: #00acd1;
+}
+
+.shin-etsuline_shin-etsu {
+  background: #00acd1;
+}
+
+.echigoline {
+  background: #378640;
+}
+
+.hakushinline {
+  background: #f37aa8;
+}
+
+.yahikoline {
+  background: #8f0079;
+}
+
+.koumiline {
+  background: #378640;
+}
+
+.shinonoiline {
+  background: #cb5f12;
+}
+
+.oitoline {
+  background: #957490;
+}
+
+.iiyamaline {
+  background: #5bbb24;
+}
+
+.tohokushinkansen {
+  background: #378640;
+}
+
+.yamagatashinkansen {
+  background: #ff6733;
+}
+
+.akitashinkansen {
+  background: #e53194;
+}
+
+.joetsushinkansen {
+  background: #ec8c82;
+}
+
+.hokurikushinkansen {
+  background: #03c13d;
+}
+
+.shonan-shinjukuline {
+  background: #f30000;
+}
+
+.ueno-tokyoline {
+  background: #8f0079;
+}
+
+.sotetsuline {
+  background: #00C3A7;
+}
+
+.sobuline {
+  background: #fdd700;
+}
+
+/* -----------------------------------------
+	幅狭テーブル
+----------------------------------------- */
+table.narrow th, table.narrow td {
+  padding: 10px !important;
+}
+
+/* -----------------------------------------
+	在来線特急等
+----------------------------------------- */
+.h1_trainIcon {
+  display: block;
+  width: 70px;
+  height: 69px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #f8f8f8;
+}
+
+.h1_trainIcon img {
+  width: 50px;
+}
+
+@media screen and (max-width: 750px) {
+  .h1_trainIcon {
+    width: 44px;
+    height: 46px;
+    margin-right: 8px;
+  }
+  .h1_trainIcon img {
+    width: 33px;
+    margin-top: -3px;
+  }
+}
+/* -----------------------------------------
+	路線別ページ
+----------------------------------------- */
+.h1_rosen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.h1_rosen .h1_rosen_ico {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.h1_rosen .h1_rosen_ico img {
+  width: 32px;
+}
+
+.h1_rosen .h1_nm_ico {
+  width: 65px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .h1_rosen {
+    align-items: center;
+  }
+  .h1_rosen .h1_rosen_ico {
+    width: 44px;
+    height: 46px;
+    margin-right: 8px;
+  }
+  .h1_rosen .h1_rosen_ico img {
+    width: 20px;
+  }
+  .h1_rosen .h1_nm_ico {
+    width: 44px;
+    margin-right: 8px;
+  }
+}
+/* -----------------------------------------
+	遅延証明書
+----------------------------------------- */
+.delayTable_2col {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 750px) {
+  .delayTable_2col {
+    display: block;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+.delayTable_2col > .delayTable {
+  max-width: 464px;
+  width: 49%;
+}
+@media screen and (max-width: 750px) {
+  .delayTable_2col > .delayTable {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .delayTable_2col > .delayTable:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.delayTable > table th {
+  padding: 20px 10px;
+}
+@media screen and (max-width: 750px) {
+  .delayTable > table th {
+    padding: 4% 2%;
+  }
+}
+.delayTable > table td {
+  padding: 20px 5px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .delayTable > table td {
+    padding: 4% 2%;
+    font-size: 3.5vw;
+  }
+  .delayTable > table td .in_p {
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    display: block;
+    margin: auto;
+  }
+}
+.delayTable .table_cel01 {
+  width: 23%;
+}
+.delayTable .table_cel02,
+.delayTable .table_cel03,
+.delayTable .table_cel04,
+.delayTable .table_cel05,
+.delayTable .table_cel06 {
+  width: 10%;
+}
+
+.delayTable .rosen_th {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  .delayTable .rosen_th {
+    display: block;
+  }
+}
+.delayTable .rosen_th .rosen_ico {
+  width: 35px;
+  margin-right: 8px;
+}
+@media screen and (max-width: 750px) {
+  .delayTable .rosen_th .rosen_ico {
+    display: block;
+    width: 55%;
+    margin: 0 auto 5px;
+  }
+}
+.delayTable .rosen_th .rosen_color {
+  width: 35px;
+  height: 9px;
+  margin-right: 8px;
+}
+@media screen and (max-width: 750px) {
+  .delayTable .rosen_th .rosen_color {
+    display: block;
+    width: 55%;
+    margin: 0 auto 5px;
+  }
+}
+.delayTable .rosen_th .name {
+  width: calc(100% - 43px);
+  text-align: left;
+}
+@media screen and (max-width: 750px) {
+  .delayTable .rosen_th .name {
+    width: 100%;
+  }
+}
+
+.delayTable .delay {
+  background: #eefbee;
+}
+
+.delayTable .delay a {
+  position: relative;
+}
+
+.delayTable .delay a::before {
+  content: "";
+  display: inline-block;
+  background: url(/material/img/ico_blank.svg) no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.delayTable th > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.tableArrow {
+  position: relative;
+}
+
+.tableArrow:before, .tableArrow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.tableArrow:before {
+  bottom: -7px;
+  width: 2px;
+  height: 15px;
+  background: #999;
+}
+
+.tableArrow:after {
+  bottom: -7px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  transform: rotate(135deg);
+}
+
+.delayTable.tableFix table {
+  table-layout: auto;
+}
+
+/*テーブルの見出しをスクロール時に固定*/
+@media screen and (min-width: 751px) {
+  thead.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
+    max-width: 950px;
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+  thead.fix th {
+    background: #eee;
+    padding: 20px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  thead.fix th.w30p {
+    width: 280px !important;
+  }
+  thead.fix th.w14p {
+    width: 14% !important;
+  }
+}
+@media screen and (max-width: 970px) and (min-width: 751px) {
+  .delayTable.tableFix thead.fix {
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (max-width: 750px) {
+  .basicTable {
+    padding: 10px;
+  }
+  .tableArrow:before, .tableArrow:after {
+    display: none;
+  }
+  [class*=sp_tableBlock] table, [class*=sp_tableBlock] tr, [class*=sp_tableBlock] th, [class*=sp_tableBlock] td {
+    display: block;
+  }
+  [class*=sp_tableBlock] th, [class*=sp_tableBlock] td {
+    padding: 5% !important;
+  }
+  [class*=sp_tableBlock] tbody {
+    display: flex;
+  }
+  [class*=sp_tableBlock] th:first-child {
+    background: #eee;
+  }
+  [class*=sp_tableBlock] th:nth-of-type(n+2) {
+    background: #f8f8f8;
+  }
+  [class*=sp_tableBlock] td {
+    background: #fff;
+  }
+  .basicTable[class*=sp_tableBlock] > table td + td {
+    border-top: 1px solid #ddd;
+    border-left: none;
+  }
+  .basicTable[class*=sp_tableBlock] > table th:nth-of-type(n+2) {
+    border-top: 1px solid #ddd;
+  }
+  .sp_tableBlock02 th {
+    background: #f8f8f8 !important;
+  }
+}
+/* -----------------------------------------
+	運行情報トップページ
+----------------------------------------- */
+.top_wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* -----------------------------------------
+	運行情報エリアページ
+----------------------------------------- */
+.area_wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.area_wrapper > .linkPage_list {
+  margin-bottom: 40px;
+}
+.area_wrapper > .linkPage_list > li {
+  margin-bottom: 10px;
+}
+.area_wrapper > .linkPage_list > li + li {
+  margin-left: 20px;
+}
+@media screen and (max-width: 750px) {
+  .area_wrapper > .linkPage_list > li + li {
+    margin-left: 0;
+  }
+}
+.area_wrapper > .heading02 {
+  margin-bottom: 50px;
+}
+
+/* -----------------------------------------
+	新幹線の運休情報
+----------------------------------------- */
+.shinkansen_wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.shinkansen_wrapper .rosen .rosen_color {
+  width: 40px;
+  height: 9px;
+  margin: -1px 15px 1px 0;
+}
+.shinkansen_wrapper:last-of-type {
+  margin-bottom: 100px;
+}
+.shinkansen_wrapper > .heading02 {
+  margin-bottom: 50px;
+}
+
+/* -----------------------------------------
+	運行情報・運休情報マップ枠
+----------------------------------------- */
+.operation_status_image {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+.operation_status_image-show {
+  margin-bottom: 80px;
+}
+
+.operation_status_image-none {
+  display: none !important;
+}
+
+/* -----------------------------------------
+	運行情報枠
+----------------------------------------- */
+#operation_info_box .operation_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#operation_info_box .operation_box.is-hidden {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .operation_box {
+    display: block;
+  }
+}
+#operation_info_box .operation_box_btn {
+  width: 125px;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .operation_box_btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+#operation_info_box .operation_box_btn #btn_reload {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .operation_box_btn #btn_reload {
+    margin-bottom: 0;
+    width: 40%;
+  }
+}
+#operation_info_box .operation_box_btn #btn_reload a {
+  text-align: center;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  padding: 8px 5px;
+  color: #333;
+}
+#operation_info_box .operation_box_btn #btn_reload a::before {
+  content: "";
+  display: inline-block;
+  background: url(/train_info/img/ico_info_reload.svg) no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+#operation_info_box .operation_box_btn #btn_reload a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .operation_box_btn #btn_delay_certificate {
+    width: 40%;
+  }
+}
+#operation_info_box .operation_box_btn #btn_delay_certificate a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #008803;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 5px;
+}
+#operation_info_box .operation_box_btn #btn_delay_certificate a::before {
+  content: "";
+  display: inline-block;
+  background: url(/train_info/img/ico_btninfo_delay.svg) no-repeat;
+  background-size: contain;
+  width: 14px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+#operation_info_box .operation_box_btn #btn_delay_certificate a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#operation_info_box .trainInfo_list {
+  display: flex;
+  width: calc(100% - 125px);
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .trainInfo_list {
+    width: 100%;
+  }
+}
+#operation_info_box .trainInfo_list > li {
+  max-width: 150px;
+  width: 24%;
+  margin-right: 12px;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .trainInfo_list > li {
+    max-width: 100%;
+    width: 24%;
+    margin-right: 1%;
+  }
+  #operation_info_box .trainInfo_list > li:last-child {
+    margin-right: 0;
+  }
+}
+#operation_info_box .trainInfo_list > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px 5px;
+  background-color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .trainInfo_list > li > a {
+    padding: 15% 2%;
+    font-size: 4vw;
+  }
+}
+#operation_info_box .trainInfo_list > li > a > .areaText {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#operation_info_box .trainInfo_list > li > a img {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: 8px;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box .trainInfo_list > li > a img {
+    height: 5vw;
+  }
+}
+#operation_info_box .trainInfo_list > li > a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#operation_info_box .trainInfo_list > li.adjust a {
+  background-color: #ffe8e5;
+  color: #f23030;
+  border: 1px solid #ff6759;
+}
+#operation_info_box .trainInfo_list > li.delay a {
+  background-color: #fffcd9;
+  color: #f26130;
+  border: 1px solid #f27130;
+}
+#operation_info_box.lang_multi .operation_box {
+  align-items: flex-start;
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box.lang_multi .trainInfo_list > li > a {
+    font-size: 2.7vw;
+  }
+}
+@media screen and (min-width: 751px) {
+  #operation_info_box.lang_multi .trainInfo_list {
+    width: calc(100% - 150px);
+  }
+  #operation_info_box.lang_multi .operation_box_btn {
+    width: 150px;
+  }
+  #operation_info_box.lang_multi .operation_box_btn #btn_reload a {
+    font-size: 1.3rem;
+    position: relative;
+  }
+  #operation_info_box.lang_multi .operation_box_btn #btn_reload a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+  }
+  #operation_info_box.lang_multi .operation_box_btn #btn_delay_certificate a {
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 20px;
+  }
+  #operation_info_box.lang_multi .operation_box_btn #btn_delay_certificate a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #operation_info_box.lang_multi .operation_box_btn #btn_reload, #operation_info_box.lang_multi .operation_box_btn #btn_delay_certificate {
+    width: 45%;
+  }
+  #operation_info_box.lang_multi .operation_box_btn #btn_reload > a, #operation_info_box.lang_multi .operation_box_btn #btn_delay_certificate > a {
+    font-size: 3.4vw;
+  }
+}
+#operation_info_box.lang_multi .operation_infoText_multi {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* -----------------------------------------
+	入場規制枠
+----------------------------------------- */
+.restrictions_box {
+  margin-top: 35px;
+  border: 5px solid #008803;
+  background: #fff;
+}
+@media screen and (max-width: 750px) {
+  .restrictions_box {
+    margin-top: 20px;
+  }
+}
+.restrictions_box .restrictions_box_h {
+  background: #008803;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 750px) {
+  .restrictions_box .restrictions_box_h {
+    padding: 2%;
+  }
+}
+.restrictions_box .restrictions_info {
+  padding: 10px;
+}
+.restrictions_box .restrictions_info > dt {
+  border-left: 5px solid #008803;
+  padding-left: 10px;
+}
+.restrictions_box .restrictions_info.js_acc > dt {
+  position: relative;
+  cursor: pointer;
+}
+.restrictions_box .restrictions_info.js_acc > dt::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 14px;
+  background: #008803;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.4s;
+}
+.restrictions_box .restrictions_info.js_acc > dt.is-active::before {
+  content: none;
+}
+.restrictions_box .restrictions_info.js_acc > dt::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: #008803;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.restrictions_box .restrictions_info.js_acc > dd {
+  line-height: 0;
+  height: 0;
+  opacity: 0;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  padding-top: 0;
+}
+.restrictions_box .restrictions_info.js_acc > dd.is-show {
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+/* -----------------------------------------
+	アプリSNS紹介枠
+----------------------------------------- */
+#traininfo_webapp {
+  margin-top: 45px;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp {
+    margin-top: 30px;
+  }
+}
+#traininfo_webapp .traininfo_webapp_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .traininfo_webapp_list {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+#traininfo_webapp .traininfo_webapp_list > li {
+  width: calc((100% - 20px) / 2);
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .traininfo_webapp_list > li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+#traininfo_webapp .traininfo_webapp_list > li + li {
+  margin-left: 10px;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .traininfo_webapp_list > li + li {
+    margin-left: 0;
+  }
+}
+#traininfo_webapp .traininfo_webapp_list > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #008803;
+  border-radius: 3px;
+  color: #fff;
+  padding: 15px 30px 15px 15px;
+  position: relative;
+}
+#traininfo_webapp .traininfo_webapp_list > li > a.blankLink::after {
+  content: "";
+  display: inline-block;
+  background: url(/material/img/ico_blank_w.svg) no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 15px;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .traininfo_webapp_list > li > a {
+    padding: 3% 9% 3% 3%;
+  }
+}
+#traininfo_webapp .traininfo_webapp_list > li > a > span {
+  width: 100%;
+  text-align: center;
+}
+#traininfo_webapp .traininfo_webapp_list > li > a:hover {
+  text-decoration: none;
+  transition-duration: 0.2s;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#traininfo_webapp .traininfo_webapp_list > li#btn_station_congestion a::before {
+  content: "";
+  display: block;
+  background: url(/train_info/img/ico_station_congestion.svg) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+#traininfo_webapp .traininfo_webapp_list > li#webapp_list_btn_delay_certificate a::before {
+  content: "";
+  display: block;
+  background: url(/train_info/img/ico_delay_certificate.svg) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+#traininfo_webapp .traininfo_webapp_list > li#btn_train_congestion a::before {
+  content: "";
+  display: block;
+  background: url(/train_info/img/ico_train_congestion.svg) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+#traininfo_webapp .appSns_infoBox {
+  border: 2px solid #008803;
+  padding: 15px;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .appSns_infoBox {
+    width: 100%;
+    padding: 3%;
+  }
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_h {
+  border-left: 5px solid #008803;
+  padding: 5px 8px;
+}
+#traininfo_webapp .appSns_infoBox .sns_emText {
+  margin-top: 10px;
+  border: 2px solid #eb0000;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #eb0000;
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .appSns_infoBox .appSns_infoBox_list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list > li {
+  width: 23.5%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .appSns_infoBox .appSns_infoBox_list > li {
+    width: 47%;
+    margin-top: 15px;
+  }
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_infoBox_right {
+  margin-left: 10px;
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_infoBox_list_h {
+  color: #008803;
+  font-size: 1.3rem;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_infoBox_list_h {
+    font-size: 2.8vw;
+  }
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_img {
+  width: 50px;
+}
+#traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_infoBox_text {
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 750px) {
+  #traininfo_webapp .appSns_infoBox .appSns_infoBox_list .appSns_infoBox_text {
+    font-size: 2.8vw;
+  }
+}

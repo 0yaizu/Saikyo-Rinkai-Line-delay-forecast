@@ -1,0 +1,183 @@
+'use strict';
+
+window.addEventListener('DOMContentLoaded', headerInit);
+
+
+
+/*--------------------------------------------------------------------------------------------------------
+ヘッダー初期化
+--------------------------------------------------------------------------------------------------------*/
+
+function headerInit() {
+
+/*--------------------------------------------------------------------------------------------------------
+関数定義
+--------------------------------------------------------------------------------------------------------*/
+	/**
+	 * SPメニュー
+	 */
+	function spAction() {
+
+		elm_tmp = document.querySelector('#jre_header_in .spBtn').addEventListener('click', () => {
+			FNC.addClass('#jre_header_in .header_navi02','on');
+			document.body.style.height = '100%';
+			document.body.style.overflow = 'hidden';
+			document.getElementsByTagName('html')[0].style.height = '100%';
+			document.getElementsByTagName('html')[0].style.overflow = 'auto';
+		});
+
+		elm_tmp = document.querySelectorAll('#jre_header_in .crossBtn');
+		for (let i = 0; i < elm_tmp.length; i++) {
+			elm_tmp[i].addEventListener('click', () => {
+				FNC.removeClass('.header_navi02 .header_navi02_list > li', 'active');
+				FNC.removeClass('#jre_header_in .header_navi02', 'on');
+				document.body.style.height = 'auto';
+				document.body.style.overflow = 'auto';
+				document.getElementsByTagName('html')[0].style.height = 'auto';
+				document.getElementsByTagName('html')[0].style.overflow = 'auto';
+			});
+		}
+	}
+
+
+/*--------------------------------------------------------------------------------------------------------
+headerHTMLを挿入
+--------------------------------------------------------------------------------------------------------*/
+
+	const headerHTML = `
+<p class="main_skipLink"><a href="#main_body">本文へジャンプ</a></p>
+<div id="jre_header_in">
+	<div id="jre_header_in_wrap">
+		<p class="logo"><a href="https://www.jreast.co.jp/"><img src="/material/img/logo_jr.svg" alt="JR東日本"></a></p>
+		<div class="header_navi">
+			<div class="header_navi01">
+				<ul class="navi01_btn">
+					<li id="lang">
+						<button type="button" class="btn"><span>Language</span></button>
+						<ul class="lang_link">
+							<li><a href="https://www.jreast.co.jp/multi/en/">English</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/zh-CHT/">繁體中文</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/zh-CHS/">簡体中文</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/ko/">한국어</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/th/">ภาษาไทย</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/id/">Bahasa Indonesia</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/fr/">Français</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/de/">Deutsch</a></li>
+							<li><a href="https://www.jreast.co.jp/multi/es/">Español</a></li>
+						</ul>
+						<button type="button" class="close_btn"></button>
+					</li>
+					<li id="link_jrePoint">
+						<a href="https://www.jrepoint.jp/" target="_blank" rel="noopener">
+							<picture>
+								<source media="(max-width: 750px)" srcset="//www.jreast.co.jp/material/img/logo_header_jrepoint-sp.png">
+								<img src="/material/img/logo_jrepoint.svg" alt="JRE POINT（別ウインドウで開きます）">
+							<picture>
+						</a>
+					</li>
+					<li id="link_jreMall">
+						<a href="https://www.jreastmall.com/" target="_blank" rel="noopener"><img src="/material/img/logo_jremall.svg" alt="JRE MALL（別ウインドウで開きます）"></a>
+					</li>
+				</ul>
+				<ul class="navi01_link">
+					<li><a href="https://www.jreast.co.jp/info/">よくいただくお問い合わせ</a></li>
+					<li class="sp"><a href="https://www.jreast.co.jp/press/">ニュースリリース一覧</a></li>
+				</ul>
+				<p class="spBtn"><img src="/material/img/header/ico_header_sp_menu.svg" alt="メニュー"></p>
+			</div>
+			<div class="header_navi02">
+				<p class="crossBtn"></p>
+				<ul class="header_navi02_list">
+				<li id="navi_train">
+				    <p class="nav"><a href="https://www.jreast.co.jp/railway/">鉄道・きっぷの予約</a></p>
+				</li>
+				<li id="navi_travel">
+				    <p class="nav"><a href="https://www.jreast.co.jp/travel/">エリア・観光</a></p>
+				</li>
+				<li id="navi_service">
+                    <p class="nav"><a href="https://www.jreast.co.jp/life/">生活サービス</a></p>
+				</li>
+				<li id="navi_suica">
+				    <p class="nav"><a href="https://www.jreast.co.jp/suica/">Suica</a></p>
+				</li>
+				</ul>
+				<ul class="header_navi02_list02">
+					<li id="navi_company">
+						<p class="nav"><a href="https://www.jreast.co.jp/company/" target="_blank" rel="noopener">企業・IR・サステナビリティ<span class="screen-reader-text">別ウィンドウで開きます</span></a></p>
+					</li>
+					<li id="navi_recruit">
+						<p class="nav"><a href="https://www.jreast.co.jp/recruit/" target="_blank" rel="noopener">採用<span class="screen-reader-text">別ウィンドウで開きます</span></a></p>
+					</li>
+				</ul>
+			<!--//.header_navi02--></div>
+		<!--//.header_navi--></div>
+	<!--//#jre_header_in_wrap--></div>
+<!--//#jre_header_in--></div>
+<p id="main_body" class="main_skipLink">ここから本文です</p>
+`;
+
+	//ヘッダーを生成する
+	document.getElementById('jre_mtd_header').insertAdjacentHTML('beforeend' , headerHTML);
+
+
+/*--------------------------------------------------------------------------------------------------------
+言語ボタン・検索ボタンの展開
+--------------------------------------------------------------------------------------------------------*/
+	//開く
+	const elm_LangSearchBtn = document.querySelectorAll('#jre_header_in .navi01_btn li .btn');
+	for (let i = 0; i < elm_LangSearchBtn.length; i++) {
+		elm_LangSearchBtn[i].addEventListener('click', () => {
+			if(elm_LangSearchBtn[i].parentElement.classList.contains('open')) {
+				FNC.removeClass(elm_LangSearchBtn[i].parentElement, 'open');
+			} else {
+				for (let j = 0; j < elm_LangSearchBtn.length; j++) {
+					FNC.removeClass(elm_LangSearchBtn[j].parentElement, 'open');
+				}
+				FNC.addClass(elm_LangSearchBtn[i].parentElement, 'open');
+			}
+		});
+	}
+
+	//×ボタンで閉じる
+	const elm_LangSearchCloseBtn = document.querySelectorAll('#jre_header_in .header_navi01 .navi01_btn .close_btn');
+	for (let i = 0; i < elm_LangSearchCloseBtn.length; i++) {
+		elm_LangSearchCloseBtn[i].addEventListener('click', () => {
+			FNC.removeClass(elm_LangSearchCloseBtn[i].parentElement, 'open');
+		});
+	}
+
+/*--------------------------------------------------------------------------------------------------------
+SPで個別処理
+--------------------------------------------------------------------------------------------------------*/
+	if(CONST.MATCH.SP) {//SP時
+		//SP表示
+		const navi01_linkHtml = document.getElementsByClassName('navi01_link')[0].outerHTML;
+		document.getElementsByClassName('header_navi02')[0].insertAdjacentHTML('beforeend', navi01_linkHtml);
+		FNC.hideElement('.header_navi01 > .navi01_link');
+		spAction();
+	}
+
+
+/*--------------------------------------------------------------------------------------------------------
+リサイズイベント
+--------------------------------------------------------------------------------------------------------*/
+	const headerResizeMediaQuery = CONST.MEDIAQUERY.SP;
+	const headerResizeMediaQueryListener = (e) => {
+		//リサイズ時に行う処理
+		if(e.matches) {//SP幅の時
+			const navi01_linkHtml = document.getElementsByClassName('navi01_link')[0].outerHTML;
+			document.getElementsByClassName('header_navi02')[0].insertAdjacentHTML('beforeend', navi01_linkHtml);
+			FNC.hideElement('.header_navi01 > .navi01_link');
+			spAction();
+		} else {//PC幅の時
+			FNC.removeClass('#jre_header_in .header_navi02','on');
+			FNC.removeElement('.header_navi02 > .navi01_link');
+			FNC.showElement('.header_navi01 > .navi01_link');
+		}
+	};
+	//リスナー登録
+	headerResizeMediaQuery.addEventListener('change', headerResizeMediaQueryListener);
+	//初期化処理
+	headerResizeMediaQueryListener(headerResizeMediaQuery);
+
+}
