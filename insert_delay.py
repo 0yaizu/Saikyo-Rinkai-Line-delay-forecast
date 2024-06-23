@@ -12,7 +12,7 @@ html = '埼京線（関東エリア）の運行情報・運休情報：JR東日�
 df = []
 data = []
 
-bsObj = BeautifulSoup(open(html), 'html.parser')
+bsObj = BeautifulSoup(req.text, 'html.parser')
 
 #HTMLのテーブルの行数を取得
 div = bsObj.find_all('div', { 'class': 'basicTable02 tdCenter delayTable mb50 accMore_cont'})[0]
@@ -44,7 +44,8 @@ df.pop(0)
 
 df_ins = pd.DataFrame(df, columns=['date', 'first_seven', 'seven_ten', 'ten_sixteen', 'sixteen_twentyone', 'twentyone_last'])
 
-df_ins.to_sql('delay_time', conn, if_exists='append', index=False)
+df_ins.to_sql('temp_delay_time', conn, if_exists='replace', index=False)
+conn.execute('INSERT OR IGNORE INTO delay_time SELECT * FROM temp_delay_time')
 
 df_sel = pd.read_sql('SELECT * FROM delay_time', conn)
 print(df_sel)
